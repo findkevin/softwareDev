@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import About from './component/about';
 import Contact from './component/contact';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         >
           Learn React
         </a>
+        <About/>
         <Contact/>
       </header>
     </div>
