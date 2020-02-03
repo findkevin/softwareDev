@@ -15,21 +15,8 @@ function App() {
         <h1>
           Kevin Lam
         </h1>
-
         <h1>Software Engineer based in NYC!</h1>
         <p>Fullstack Developer | UX/UI Enthusiast | Automotive Photography Enthusiast</p>
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
         <Intro/>
         <Work/>
         <About/>
