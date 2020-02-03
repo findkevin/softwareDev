@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Intro from './component/introduction';
 import About from './component/about';
 import Contact from './component/contact';
 
@@ -28,6 +29,7 @@ function App() {
         >
           Learn React
         </a>
+        <Intro/>
         <About/>
         <Contact/>
       </header>
