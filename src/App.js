@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Intro from './component/introduction';
+import Work from './component/work';
 import About from './component/about';
 import Contact from './component/contact';
 
@@ -30,6 +31,7 @@ function App() {
           Learn React
         </a>
         <Intro/>
+        <Work/>
         <About/>
         <Contact/>
       </header>
