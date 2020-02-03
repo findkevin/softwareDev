@@ -2,11 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Contact from './component/contact';
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>
+          Kevin Lam
+        </h1>
+
+        <h1>Software Engineer based in NYC!</h1>
+        <p>Fullstack Developer | UX/UI Enthusiast | Automotive Photography Enthusiast</p>
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -18,6 +27,7 @@ function App() {
         >
           Learn React
         </a>
+        <Contact/>
       </header>
     </div>
   );
