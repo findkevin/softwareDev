@@ -10,7 +10,7 @@ import Work from './component/work';
 import About from './component/about';
 import Contact from './component/contact';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       {/* <header className="App-header">
