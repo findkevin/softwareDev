@@ -22,7 +22,9 @@ function App() {
       <div id="wrapper">
         <header id="header">
           <div className="logo">
-          <img src={logo} className="logo" alt="logo" />
+            <div className="logo">
+            <img src={logo} className="logo" alt="logo" />
+            </div>
           </div>
           <div className="content">
             <div className="inner">
@@ -39,6 +41,9 @@ function App() {
             </ul>
           </nav>
         </header>
+        <footer id="footer">
+        <p className="copyright">KevinLam.dev</p>
+      </footer>
       </div>
     </div>
   );

@@ -1286,7 +1286,7 @@ input, select, textarea {
 			margin-top: 3.5rem;
 		}
 
-			#header > *:before {
+			/* #header > *:before {
 				content: '';
 				display: block;
 				position: absolute;
@@ -1295,7 +1295,7 @@ input, select, textarea {
 				width: 1px;
 				height: calc(3.5rem + 1px);
 				background: #ffffff;
-			}
+			} */
 
 		#header > :first-child {
 			margin-top: 0;
@@ -1306,9 +1306,9 @@ input, select, textarea {
 			}
 
 		#header .logo {
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
+			width: 10rem;
+			height: 5rem;
+			/* line-height: 5.5rem; */
 			border: solid 1px #ffffff;
       border-radius: 100%;
       animation: App-logo-spin infinite 20s linear;
