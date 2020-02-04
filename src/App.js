@@ -21,9 +21,9 @@ function App() {
       </header> */}
       <div id="wrapper">
         <header id="header">
-          {/* <div className="logo">
-            <span className="icon fa-gem" />
-          </div> */}
+          <div className="logo">
+          <img src={logo} className="logo" alt="logo" />
+          </div>
           <div className="content">
             <div className="inner">
               <Home/>
