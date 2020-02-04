@@ -1308,10 +1308,10 @@ input, select, textarea {
 		#header .logo {
 			width: 10rem;
 			height: 5rem;
-			/* line-height: 5.5rem; */
+			line-height: 5.5rem;
 			border: solid 1px #ffffff;
       border-radius: 100%;
-      animation: App-logo-spin infinite 20s linear;
+      animation: App-logo-spin infinite 200s linear;
 		}
 
 			#header .logo .icon:before {
