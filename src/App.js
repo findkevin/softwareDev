@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Home from './component/home';
 import Intro from './component/introduction';
 import Work from './component/work';
 import About from './component/about';
@@ -12,11 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          Kevin Lam
-        </h1>
-        <h1>Software Engineer based in NYC!</h1>
-        <p>Fullstack Developer | UX/UI Enthusiast | Automotive Photography Enthusiast</p>
+        <Home/>
         <Intro/>
         <Work/>
         <About/>
