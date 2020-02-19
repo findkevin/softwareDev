@@ -22,7 +22,8 @@ class App extends Component {
 
   togglePopup = () => {
     this.setState({
-      showPopup: !this.state.showPopup
+      showPopup: !this.state.showPopup,
+      // component: event.target.value
     });
   };
 
@@ -90,7 +91,10 @@ class App extends Component {
             </nav>
 
             {this.state.showPopup ? (
-              <Popup text="Popup" closePopup={this.togglePopup.bind(this)} />
+              <Popup
+                // component={this.togglePopup.bind(this)}
+                closePopup={this.togglePopup.bind(this)}
+              />
             ) : null}
             {/* End Pop up Example */}
           </header>
