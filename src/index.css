@@ -1061,6 +1061,7 @@ input, select, textarea {
 		height: 2.75rem;
 		letter-spacing: 0.2rem;
 		line-height: 2.75rem;
+		margin: 0.75rem;
 		outline: 0;
 		padding: 0 1.25rem 0 1.35rem;
 		text-align: center;

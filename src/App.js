@@ -14,30 +14,21 @@ import Popup from "./component/popup";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { showPopup: false };
+    this.state = {
+      showPopup: false,
+      component: null
+    };
   }
 
-  togglePopup() {
+  togglePopup = () => {
     this.setState({
       showPopup: !this.state.showPopup
     });
-  }
+  };
 
   render() {
     return (
       <div className="App">
-        <h1> Simple Popup Example In React Application </h1>
-        <button onClick={this.togglePopup.bind(this)}>
-          {" "}
-          Click To Launch Popup
-        </button>
-
-        {this.state.showPopup ? (
-          <Popup
-            text='Click "Close Button" to hide popup'
-            closePopup={this.togglePopup.bind(this)}
-          />
-        ) : null}
         {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Home/>
@@ -58,7 +49,7 @@ class App extends Component {
                 <Home />
               </div>
             </div>
-            <nav>
+            {/* <nav>
               <ul>
                 <li>
                   <a href="/intro">Intro</a>
@@ -73,15 +64,35 @@ class App extends Component {
                   <a href="/contact">Contact</a>
                 </li>
                 {/*<li><a href="#elements">Elements</a></li>*/}
-              </ul>
+            {/* </ul>
               <Switch>
                 <Route path="/intro" exact component={Intro} />
                 <Route path="/work" exact component={Work} />
                 <Route path="/about" exact component={About} />
                 <Route path="/contact" exact component={Contact} />
                 {/* <Route path="*" component={ErrorPage} /> */}
-              </Switch>
+            {/* </Switch>
+            </nav> */}
+            {/* Pop up example */}
+            <nav>
+              <button onClick={this.togglePopup.bind(this)} value="intro">
+                Intro
+              </button>
+              <button onClick={this.togglePopup.bind(this)} value="work">
+                Work
+              </button>
+              <button onClick={this.togglePopup.bind(this)} value="about">
+                About
+              </button>
+              <button onClick={this.togglePopup.bind(this)} value="contact">
+                Contact
+              </button>
             </nav>
+
+            {this.state.showPopup ? (
+              <Popup text="Popup" closePopup={this.togglePopup.bind(this)} />
+            ) : null}
+            {/* End Pop up Example */}
           </header>
           <footer id="footer">
             <p className="copyright">KevinLam.dev</p>
