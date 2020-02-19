@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 
 import Home from './component/home';
@@ -9,6 +9,7 @@ import Intro from './component/introduction';
 import Work from './component/work';
 import About from './component/about';
 import Contact from './component/contact';
+import ErrorPage from './component/error_page';
 
 const App = () => {
   return (
@@ -41,12 +42,13 @@ const App = () => {
               <li><a href="/contact">Contact</a></li>
               {/*<li><a href="#elements">Elements</a></li>*/}
             </ul>
-            <Router>
+            <Switch>
               <Route path="/intro" exact component={Intro} />
               <Route path="/work" exact component={Work} />
               <Route path="/about" exact component={About} />
               <Route path="/contact" exact component={Contact} />
-            </Router>
+              <Route path="*" component={ErrorPage} />
+            </Switch>
           </nav>
         </header>
         <footer id="footer">
