@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import "../index.css";
 
 import Intro from "./introduction";
@@ -7,7 +7,7 @@ import About from "./about";
 import Contact from "./contact";
 import ErrorPage from "./error_page";
 
-class Popup extends React.Component {
+class Popup extends Component {
   render() {
     return (
       <div className="popup">

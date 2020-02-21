@@ -20,11 +20,12 @@ class App extends Component {
     };
   }
 
-  togglePopup = () => {
+  togglePopup = (event) => {
     this.setState({
       showPopup: !this.state.showPopup,
-      // component: event.target.value
+      component: event.target.value
     });
+    console.log(event.target.value);
   };
 
   render() {
@@ -76,26 +77,30 @@ class App extends Component {
             </nav> */}
             {/* Pop up example */}
             <nav>
-              <button onClick={this.togglePopup.bind(this)} value="intro">
+              <button onClick={e => this.togglePopup(e)} value="intro">
                 Intro
               </button>
-              <button onClick={this.togglePopup.bind(this)} value="work">
+              <button onClick={e => this.togglePopup(e)} value="work">
                 Work
               </button>
-              <button onClick={this.togglePopup.bind(this)} value="about">
+              <button onClick={e => this.togglePopup(e)} value="about">
                 About
               </button>
-              <button onClick={this.togglePopup.bind(this)} value="contact">
+              <button onClick={e => this.togglePopup(e)} value="contact">
                 Contact
               </button>
             </nav>
 
+
             {this.state.showPopup ? (
               <Popup
+                //I want to render my components here after each button has been clicked.
                 // component={this.togglePopup.bind(this)}
                 closePopup={this.togglePopup.bind(this)}
+
               />
             ) : null}
+
             {/* End Pop up Example */}
           </header>
           <footer id="footer">
