@@ -1,26 +1,28 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Link, Route, Switch } from "react-router-dom";
+// import { BrowserRouter as Link, Route, Switch } from "react-router-dom";
 
 import Home from "./component/home";
-import Intro from "./component/introduction";
-import Work from "./component/work";
-import About from "./component/about";
-import Contact from "./component/contact";
-import ErrorPage from "./component/error_page";
+// import Intro from "./component/introduction";
+// import Work from "./component/work";
+// import About from "./component/about";
+// import Contact from "./component/contact";
+// import ErrorPage from "./component/error_page";
 import Popup from "./component/popup";
+import Modal from "./component/Modal";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showPopup: false,
-      component: null
+      component: null,
+      show: false
     };
   }
 
-  togglePopup = (event) => {
+  togglePopup = event => {
     this.setState({
       showPopup: !this.state.showPopup,
       component: event.target.value
@@ -28,17 +30,15 @@ class App extends Component {
     console.log(event.target.value);
   };
 
+  showModal = e => {
+    this.setState({
+      show: !this.state.show
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Home/>
-        <Intro/>
-        <Work/>
-        <About/>
-        <Contact/>
-      </header> */}
         <div id="wrapper">
           <header id="header">
             <div className="logo">
@@ -51,60 +51,50 @@ class App extends Component {
                 <Home />
               </div>
             </div>
-            {/* <nav>
-              <ul>
-                <li>
-                  <a href="/intro">Intro</a>
-                </li>
-                <li>
-                  <a href="/work">Work</a>
-                </li>
-                <li>
-                  <a href="/about">About</a>
-                </li>
-                <li>
-                  <a href="/contact">Contact</a>
-                </li>
-                {/*<li><a href="#elements">Elements</a></li>*/}
-            {/* </ul>
-              <Switch>
-                <Route path="/intro" exact component={Intro} />
-                <Route path="/work" exact component={Work} />
-                <Route path="/about" exact component={About} />
-                <Route path="/contact" exact component={Contact} />
-                {/* <Route path="*" component={ErrorPage} /> */}
-            {/* </Switch>
-            </nav> */}
-            {/* Pop up example */}
             <nav>
-              <button onClick={e => this.togglePopup(e)} value="intro">
+              <button
+                onClick={e => {
+                  this.showModal();
+                }}
+              >
+                {" "}
+                show Modal{" "}
+              </button>
+              <button onClick={e => this.togglePopup(e)} value="Intro">
                 Intro
               </button>
-              <button onClick={e => this.togglePopup(e)} value="work">
+              <button onClick={e => this.togglePopup(e)} value="Work">
                 Work
               </button>
-              <button onClick={e => this.togglePopup(e)} value="about">
+              <button onClick={e => this.togglePopup(e)} value="About">
                 About
               </button>
-              <button onClick={e => this.togglePopup(e)} value="contact">
+              <button onClick={e => this.togglePopup(e)} value="Contact">
                 Contact
               </button>
             </nav>
 
+            {/* Testing Pop up component */}
 
             {this.state.showPopup ? (
               <Popup
                 //I want to render my components here after each button has been clicked.
-                // component={this.togglePopup.bind(this)}
-                closePopup={this.togglePopup.bind(this)}
-
+                // component={e => this.togglePopup(e)}
+                component={this.state.component}
+                closePopup={e => this.togglePopup(e)}
               />
             ) : null}
 
-            {/* End Pop up Example */}
+            {/* End Pop up Component */}
+
+            {/* Testing Modal */}
+            <Modal onClose={this.showModal} show={this.state.show}>
+              Display component here
+            </Modal>
+            {/* End Modal Test */}
           </header>
           <footer id="footer">
-            <p className="copyright">KevinLam.dev</p>
+            <p className="copyright">Powered by React.js</p>
           </footer>
         </div>
       </div>
