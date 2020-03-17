@@ -10,7 +10,6 @@ import Home from "./component/home";
 // import Contact from "./component/contact";
 // import ErrorPage from "./component/error_page";
 import Popup from "./component/popup";
-import Modal from "./component/Modal";
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +17,6 @@ class App extends Component {
     this.state = {
       showPopup: false,
       component: null,
-      show: false
     };
   }
 
@@ -28,12 +26,6 @@ class App extends Component {
       component: event.target.value
     });
     console.log(event.target.value);
-  };
-
-  showModal = e => {
-    this.setState({
-      show: !this.state.show
-    });
   };
 
   render() {
@@ -52,14 +44,6 @@ class App extends Component {
               </div>
             </div>
             <nav>
-              <button
-                onClick={e => {
-                  this.showModal();
-                }}
-              >
-                {" "}
-                show Modal{" "}
-              </button>
               <button onClick={e => this.togglePopup(e)} value="Intro">
                 Intro
               </button>
@@ -87,11 +71,6 @@ class App extends Component {
 
             {/* End Pop up Component */}
 
-            {/* Testing Modal */}
-            <Modal onClose={this.showModal} show={this.state.show}>
-              Display component here
-            </Modal>
-            {/* End Modal Test */}
           </header>
           <footer id="footer">
             <p className="copyright">Powered by React.js</p>
@@ -101,5 +80,8 @@ class App extends Component {
     );
   }
 }
+
+const container = document.createElement("div");
+document.body.appendChild(container);
 
 export default App;

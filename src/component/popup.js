@@ -17,7 +17,7 @@ class Popup extends Component {
   render() {
     return (
       <div className="popup">
-        <div className="popup\_inner">
+        <div className="popup_inner">
           {/* <h1>{this.props.component}</h1> */}
           {Object.keys(this.selectedComponent).map(function(key, index){
             //return the component that matches the key.
