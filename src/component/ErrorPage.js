@@ -6,7 +6,7 @@ class ErrorPage extends Component {
       <div className="content">
         <h1>This is our Error Page</h1>
         <h2>
-          The page you are looking for {this.props.match.url} is not available
+          The page you are looking for is not available
           at the moment.
         </h2>
       </div>
