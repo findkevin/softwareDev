@@ -7,7 +7,7 @@ export default class Intro extends Component {
         <h2 className="major">Intro</h2>
         <span className="image main"><img src="images/pic01.jpg" alt="" /></span>
         <p>My name is Kevin Lam, I am a software developer based in NYC. Include hobbies here...?</p>
-        <p>By the way, check out my projects here <a href="#work">GitHub</a>.</p>
+        <p>By the way, check out some of my projects here <a href="#work">GitHub</a>.</p>
       </article>
     )
   }

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "../index.css";
 
-import Intro from "./introduction";
+import Intro from "./Introduction";
 import Work from "./work";
-import About from "./about";
-import Contact from "./contact";
-import ErrorPage from "./error_page";
+import About from "./About";
+import Contact from "./Contact";
+import ErrorPage from "./ErrorPage";
 
 class Popup extends Component {
   selectedComponent = {
@@ -30,7 +30,7 @@ class Popup extends Component {
         } else if (key === "Contact") {
           component = <Contact />;
         } else {
-          component = <ErrorPage/>
+          component = <ErrorPage />
         }
         return component;
       });

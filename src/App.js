@@ -3,20 +3,20 @@ import logo from "./logo.svg";
 import "./App.css";
 // import { BrowserRouter as Link, Route, Switch } from "react-router-dom";
 
-import Home from "./component/home";
+import Home from "./component/Home";
 // import Intro from "./component/introduction";
 // import Work from "./component/work";
 // import About from "./component/about";
 // import Contact from "./component/contact";
 // import ErrorPage from "./component/error_page";
-import Popup from "./component/popup";
+import Popup from "./component/Popup";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showPopup: false,
-      component: null,
+      component: null
     };
   }
 
@@ -43,20 +43,6 @@ class App extends Component {
                 <Home />
               </div>
             </div>
-            <nav>
-              <button onClick={e => this.togglePopup(e)} value="Intro">
-                Intro
-              </button>
-              <button onClick={e => this.togglePopup(e)} value="Work">
-                Work
-              </button>
-              <button onClick={e => this.togglePopup(e)} value="About">
-                About
-              </button>
-              <button onClick={e => this.togglePopup(e)} value="Contact">
-                Contact
-              </button>
-            </nav>
 
             {/* Testing Pop up component */}
 
@@ -71,6 +57,20 @@ class App extends Component {
 
             {/* End Pop up Component */}
 
+            <nav>
+              <button onClick={e => this.togglePopup(e)} value="Intro">
+                Intro
+              </button>
+              <button onClick={e => this.togglePopup(e)} value="Work">
+                Work
+              </button>
+              <button onClick={e => this.togglePopup(e)} value="About">
+                About
+              </button>
+              <button onClick={e => this.togglePopup(e)} value="Contact">
+                Contact
+              </button>
+            </nav>
           </header>
           <footer id="footer">
             <p className="copyright">Powered by React.js</p>
