@@ -7,10 +7,16 @@ export default class Contact extends Component {
       <article id="contact">
         <h2 className="major">Contact</h2>
         <p>
-          LinkedIn
-          GitHub
-          Email
+          <a href={"https://www.linkedin.com/in/find-kevin/"}>LinkedIn</a>
+        </p>
+        <p>
+          <a href={"https://github.com/findkevin"}>Github</a>
+        </p>
+        <p>
           Resume
+        </p>
+        <p>
+          Email: find.kevinlam@gmail.com
         </p>
         {/* <form method="post" action="#">
           <div className="fields">

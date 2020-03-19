@@ -1835,9 +1835,10 @@ body.is-preload #footer {
   bottom: 0;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
 }
 .popup_inner {
-  position: absolute;
+  position: fixed;
   left: 25%;
   right: 25%;
   top: 25%;
