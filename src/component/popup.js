@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "../index.css";
 
-import Intro from "./Introduction";
+import Intro from "./introduction";
 import Work from "./work";
-import About from "./About";
-import Contact from "./Contact";
+import About from "./about";
+import Contact from "./contact";
 // import ErrorPage from "./ErrorPage";
 
 class Popup extends Component {

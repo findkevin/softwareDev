@@ -1824,7 +1824,7 @@ body.is-preload #footer {
   opacity: 0;
 }
 
-/* CSS for popup */
+/* CSS for Popup.js modal */
 .popup {
   position: fixed;
   width: 100%;
@@ -1844,5 +1844,5 @@ body.is-preload #footer {
   bottom: 25%;
 	margin: auto;
 	border-radius: 20px;
-  background: white;
+  background: black;
 }

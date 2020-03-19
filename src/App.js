@@ -1,15 +1,9 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-// import { BrowserRouter as Link, Route, Switch } from "react-router-dom";
 
-import Home from "./component/Home";
-// import Intro from "./component/introduction";
-// import Work from "./component/work";
-// import About from "./component/about";
-// import Contact from "./component/contact";
-// import ErrorPage from "./component/error_page";
-import Popup from "./component/Popup";
+import Home from "./component/home";
+import Popup from "./component/popup";
 
 class App extends Component {
   constructor(props) {
@@ -45,16 +39,14 @@ class App extends Component {
             </div>
 
             {/* Testing Pop up component */}
-
-            {this.state.showPopup ? (
-              <Popup
-                //I want to render my components here after each button has been clicked.
-                // component={e => this.togglePopup(e)}
-                component={this.state.component}
-                closePopup={e => this.togglePopup(e)}
-              />
-            ) : null}
-
+            <div>
+              {this.state.showPopup ? (
+                <Popup
+                  component={this.state.component}
+                  closePopup={e => this.togglePopup(e)}
+                />
+              ) : null}
+            </div>
             {/* End Pop up Component */}
 
             <nav>
