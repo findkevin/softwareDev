@@ -1256,9 +1256,10 @@ button {
 
 #bg {
   -moz-transform: scale(1);
-  -webkit-transform: scale(1);
+  -webkit-transform: translate3d(0,0,0);
   -ms-transform: scale(1);
   transform: scale(1);
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   position: fixed;
   top: 0;
